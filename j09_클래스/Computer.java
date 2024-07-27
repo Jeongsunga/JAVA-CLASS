@@ -53,4 +53,20 @@ public class Computer {
 	 * 출력하고 ram = 1로 고정
 	 * 기존 램이 1일 때는 제거 X "램을 제거할 수 없습니다."라고 안내
 	 */
+	
+	void removeRam(int gigaByte) {
+		int overRam = 0;
+		if(ram > 1) {
+			ram -= gigaByte;
+			if(ram < 1) {
+				overRam = ram + 32;
+				System.out.println("램은 최소 1기가 바이트 이상 장착하여야 합니다.");
+				System.out.println(overRam + "초과");
+				ram = 1;
+			}
+			System.out.println("줄이기 완료");
+		}else {
+			System.out.println("램을 더이상 줄일 수 없습니다.");
+		}
+	}
 }
