@@ -8,6 +8,15 @@ public class Student {
 	private String address;
 	private String phone;
 	
+	public Student(String name, int studentYear, int age, String address, String phone) {
+		super();
+		this.name = name;
+		this.studentYear = studentYear;
+		this.age = age;
+		this.address = address;
+		this.phone = phone;
+	}
+
 	public Student(String name) {
 		this.name = name;
 	}
